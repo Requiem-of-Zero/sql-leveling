@@ -122,3 +122,9 @@ GROUP BY building_name;
 SELECT *
 FROM buildings;
 
+-- List all buildings and the distinct employee roles in each building (including empty buildings) 
+-- Exercise 3
+SELECT DISTINCT building_name, role 
+FROM buildings 
+  LEFT JOIN employees
+    ON building_name = building;
