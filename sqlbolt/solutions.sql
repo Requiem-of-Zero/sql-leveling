@@ -52,3 +52,8 @@ ORDER BY longitude ASC; -- ascending, lower number is first (most west to more e
 
 -- List the two largest cities in Mexico (by population) 
 -- Exercise 4
+SELECT *
+FROM north_american_cities
+WHERE country = 'Mexico'
+ORDER BY population DESC
+LIMIT 2;
