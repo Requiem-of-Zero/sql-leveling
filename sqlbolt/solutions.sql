@@ -218,4 +218,9 @@ SELECT *, COUNT(*) AS total
 FROM employees
 GROUP BY role
 
--- 
+-- Find the total number of years employed by all Engineers
+-- Exercise 3
+SELECT *, SUM(years_employed) AS total_num_years
+FROM employees
+WHERE role = 'Engineer'
+GROUP BY role;
