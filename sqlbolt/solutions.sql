@@ -224,3 +224,12 @@ SELECT *, SUM(years_employed) AS total_num_years
 FROM employees
 WHERE role = 'Engineer'
 GROUP BY role;
+
+-- 
+-- Lesson 12: Select Queries order of Execution: SFWGHOL
+
+-- Find the number of movies each director has directed 
+-- Exercise 1
+SELECT *, COUNT(title) AS count_movies
+FROM movies
+GROUP BY director;
