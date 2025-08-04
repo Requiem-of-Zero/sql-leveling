@@ -91,3 +91,10 @@ FROM movies
 INNER JOIN boxoffice ON id = movie_id
 WHERE international_sales > domestic_sales
 GROUP BY title;
+
+-- List all the movies by their ratings in descending order 
+-- Exercise 3
+SELECT * 
+FROM movies
+INNER JOIN boxoffice ON id = movie_id
+ORDER BY rating DESC;
