@@ -128,3 +128,22 @@ SELECT DISTINCT building_name, role
 FROM buildings 
   LEFT JOIN employees
     ON building_name = building;
+
+-- 
+-- Lesson 8: NULLS
+-- buildings
+-- | building_name | capacity |
+-- | 1e | 24 |
+-- | 1w | 32 |
+-- employees
+-- | role | name | building | years_employed |
+-- | Engineer | Becky A. | 1e | 4 |
+-- | Engineer | Dan B. | 1e | 2 |
+
+-- Find the name and role of all employees who have not been assigned to a building 
+-- Exercise 1
+SELECT * 
+FROM employees
+WHERE building IS NULL;
+
+-- 
