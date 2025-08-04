@@ -65,3 +65,21 @@ FROM north_american_cities
 WHERE country = 'United States'
 ORDER BY population DESC
 LIMIT 2 OFFSET 2;
+
+-- 
+-- Lesson 6: Inner JOINS
+-- movies
+-- | id | title | director | year | length_minutes |
+-- | 1 | Toy Story | John Lasseter | 1995 | 81 |
+-- | 2 | A Bug's Life | John Lasseter | 1998 | 95 |
+-- boxoffice
+-- | movie_id | rating | domestic_sales | international_sales |
+-- | 5 | 8.2 | 380843261 | 555900000 |
+-- | 14 | 7.4 | 268492764 | 475066843 |
+
+-- Find the domestic and international sales for each movie
+-- Exercise 1
+SELECT * 
+FROM movies
+INNER JOIN boxoffice ON id = movie_id
+GROUP BY title;
