@@ -27,3 +27,13 @@ LIMIT 5 OFFSET 5;
 
 -- 
 -- Lesson 5
+-- | city | country | population | latitude | longitude |
+-- | Toronto | Canada | 2795060 | 43.653226 | -79.383184 |
+-- | Montreal | Canada | 1717767 | 45.501689 | -73.567256 |
+-- List all the Canadian cities and their populations
+-- Exercise 1
+SELECT * 
+FROM north_american_cities
+WHERE country = 'Canada';
+
+-- 
