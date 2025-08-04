@@ -190,3 +190,10 @@ WHERE year%2=0;
 -- Exercise 1
 SELECT MAX(years_employed)
 FROM employees;
+
+-- For each role, find the average number of years employed by employees in that role
+-- Exercise 2
+SELECT *, AVG(years_employed)
+FROM employees
+GROUP BY role;
+
