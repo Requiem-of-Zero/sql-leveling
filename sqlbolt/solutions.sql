@@ -152,3 +152,20 @@ SELECT *
 FROM buildings
 LEFT JOIN employees ON building_name = building
 WHERE building IS NULL;
+
+-- 
+-- Lesson 9: Queries with Expressions
+-- movies
+-- | id | title | director | year | length_minutes |
+-- | 1 | Toy Story | John Lasseter | 1995 | 81 |
+-- | 2 | A Bug's Life | John Lasseter | 1998 | 95 |
+-- boxoffice
+-- | movie_id | rating | domestic_sales | international_sales |
+-- | 5 | 8.2 | 380843261 | 555900000 |
+-- | 14 | 7.4 | 268492764 | 475066843 |
+
+-- List all movies and their combined sales in millions of dollars
+-- Exercise 1
+SELECT *, (domestic_sales + international_sales)/1000000 AS total_in_millions 
+FROM movies
+INNER JOIN boxoffice ON id = movie_id;
