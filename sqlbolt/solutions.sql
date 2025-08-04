@@ -43,3 +43,12 @@ FROM north_american_cities
 WHERE country = 'United States'
 ORDER BY latitude DESC;
 
+-- List all the cities west of Chicago, ordered from west to east 
+-- Exercise 3
+SELECT *
+FROM north_american_cities
+WHERE longitude < -87.629798 -- a lower value longitude indicates more west
+ORDER BY longitude ASC; -- ascending, lower number is first (most west to more east)
+
+-- List the two largest cities in Mexico (by population) 
+-- Exercise 4
