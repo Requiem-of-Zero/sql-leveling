@@ -182,3 +182,11 @@ SELECT *
 FROM movies
 INNER JOIN boxoffice ON id = movie_id
 WHERE year%2=0;
+
+-- 
+-- Lesson 10: Queries with Aggregates (pt 1)
+
+-- Find the longest time that an employee has been at the studio 
+-- Exercise 1
+SELECT MAX(years_employed)
+FROM employees;
