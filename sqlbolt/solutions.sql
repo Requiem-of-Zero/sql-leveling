@@ -83,3 +83,11 @@ SELECT *
 FROM movies
 INNER JOIN boxoffice ON id = movie_id
 GROUP BY title;
+
+-- Show the sales numbers for each movie that did better internationally rather than domestically
+-- Exercise 2
+SELECT * 
+FROM movies
+INNER JOIN boxoffice ON id = movie_id
+WHERE international_sales > domestic_sales
+GROUP BY title;
