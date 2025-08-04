@@ -202,3 +202,12 @@ GROUP BY role;
 SELECT *, SUM(years_employed)
 FROM employees
 GROUP BY building;
+
+-- 
+-- Lesson 11: Queries with Aggregates (pt 2)
+
+-- Find the number of Artists in the studio (without a HAVING clause) 
+-- Exercise 1
+SELECT *, COUNT(*) AS total
+FROM employees
+WHERE role = 'Artist';
