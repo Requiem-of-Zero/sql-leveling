@@ -116,3 +116,9 @@ SELECT *
 FROM employees
 LEFT JOIN buildings ON building_name = building
 GROUP BY building_name;
+
+-- Find the list of all buildings and their capacity 
+-- Exercise 2
+SELECT *
+FROM buildings;
+
