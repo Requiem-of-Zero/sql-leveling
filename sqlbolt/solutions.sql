@@ -197,3 +197,8 @@ SELECT *, AVG(years_employed)
 FROM employees
 GROUP BY role;
 
+-- Find the total number of employee years worked in each building 
+-- Exercise 3
+SELECT *, SUM(years_employed)
+FROM employees
+GROUP BY building;
