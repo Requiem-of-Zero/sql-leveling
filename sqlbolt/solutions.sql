@@ -36,4 +36,10 @@ SELECT *
 FROM north_american_cities
 WHERE country = 'Canada';
 
--- 
+-- Order all the cities in the United States by their latitude from north to south 
+-- Exercise 2
+SELECT * 
+FROM north_american_cities
+WHERE country = 'United States'
+ORDER BY latitude DESC;
+
