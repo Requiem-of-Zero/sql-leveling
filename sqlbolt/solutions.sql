@@ -233,3 +233,10 @@ GROUP BY role;
 SELECT *, COUNT(title) AS count_movies
 FROM movies
 GROUP BY director;
+
+-- Find the total domestic and international sales that can be attributed to each director 
+-- Exercise 2
+SELECT director, SUM(domestic_sales)+SUM(international_sales) AS total_sales
+FROM movies
+INNER JOIN boxoffice ON id = movie_id
+GROUP BY director;
