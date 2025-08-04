@@ -169,3 +169,10 @@ WHERE building IS NULL;
 SELECT *, (domestic_sales + international_sales)/1000000 AS total_in_millions 
 FROM movies
 INNER JOIN boxoffice ON id = movie_id;
+
+-- List all movies and their ratings in percent
+-- Exercise 2
+SELECT *, (rating)*10 AS rating_percentage 
+FROM movies
+INNER JOIN boxoffice ON id = movie_id;
+
