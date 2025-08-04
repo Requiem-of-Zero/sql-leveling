@@ -211,3 +211,11 @@ GROUP BY building;
 SELECT *, COUNT(*) AS total
 FROM employees
 WHERE role = 'Artist';
+
+-- Find the number of Employees of each role in the studio
+-- Exercise 2
+SELECT *, COUNT(*) AS total
+FROM employees
+GROUP BY role
+
+-- 
