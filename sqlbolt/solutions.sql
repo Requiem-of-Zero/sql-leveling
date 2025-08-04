@@ -146,4 +146,9 @@ SELECT *
 FROM employees
 WHERE building IS NULL;
 
--- 
+-- Find the names of the buildings that hold no employees 
+-- Exercise 2
+SELECT * 
+FROM buildings
+LEFT JOIN employees ON building_name = building
+WHERE building IS NULL;
