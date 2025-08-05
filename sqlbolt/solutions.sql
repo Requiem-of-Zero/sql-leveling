@@ -240,3 +240,14 @@ SELECT director, SUM(domestic_sales)+SUM(international_sales) AS total_sales
 FROM movies
 INNER JOIN boxoffice ON id = movie_id
 GROUP BY director;
+
+-- 
+-- Lesson 13: Inserting rows
+-- Table 1: Movies (similar table lesson 9)
+-- Table 2: Boxoffice (similar table lesson 9)
+
+-- Add the studio's new production, Toy Story 4 to the list of movies (you can use any director) 
+-- Exercise 1:
+INSERT INTO movies
+(id, title, director, year, length_minutes)
+VALUES(4, 'Toy Story 4', 'Sam Wong', 2025, 85);
